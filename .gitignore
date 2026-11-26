@@ -1,0 +1,8 @@
+dc/
+logs/
+tmp/
+home/*
+!home/.claude-server-commander/
+home/.claude-server-commander/*
+!home/.claude-server-commander/config.json
+lca/

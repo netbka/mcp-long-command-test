@@ -1,0 +1,248 @@
+{
+  "tool": "Local Commander (self-hosted edition)",
+  "package": "local-commander-mcp-agent@0.1.4",
+  "host": "HOMEPC",
+  "node": "v22.18.0",
+  "startedAt": "2026-11-26T07:33:12.172Z",
+  "config": {
+    "shell": {
+      "allowedCommands": [
+        "powershell"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "t": "0.3",
+      "scenario": "S1",
+      "what": "connected",
+      "serverPid": 46192,
+      "serverVersion": {
+        "name": "local-commander-mcp",
+        "version": "0.1.4"
+      }
+    },
+    {
+      "t": "0.4",
+      "scenario": "S1",
+      "what": "process_start",
+      "args": {
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "<run-folder>\\tick.ps1",
+          "-Tag",
+          "lca-s1"
+        ],
+        "cwd": "<run-folder>"
+      },
+      "ms": 57,
+      "isError": false,
+      "text": "{\"id\":\"1\",\"pid\":26760,\"command\":\"powershell\",\"args\":[\"-NoProfile\",\"-ExecutionPolicy\",\"Bypass\",\"-File\",\"<run-folder>\\\\tick.ps1\",\"-Tag\",\"lca-s1\"],\"cwd\":\"<run-folder>\",\"startedAt\":\"2026-11-26T07:33:12.530Z\",\"running\":true}"
+    },
+    {
+      "t": "0.4",
+      "scenario": "S1",
+      "what": "returned control",
+      "afterMs": 57,
+      "processId": "1",
+      "workloadPid": null
+    },
+    {
+      "t": "20.3",
+      "scenario": "S1",
+      "what": "process_output",
+      "args": {
+        "id": "1"
+      },
+      "ms": 3,
+      "isError": false,
+      "text": "{\"id\":\"1\",\"pid\":26760,\"command\":\"powershell\",\"args\":[\"-NoProfile\",\"-ExecutionPolicy\",\"Bypass\",\"-File\",\"<run-folder>\\\\tick.ps1\",\"-Tag\",\"lca-s1\"],\"cwd\":\"<run-folder>\",\"startedAt\":\"2026-11-26T07:33:12.530Z\",\"running\":true,\"output\":\"tick 1 09:33:13\\r\\ntick 2 09:33:14\\r\\ntick 3 09:33:15\\r\\ntick 4 09:33:16\\r\\ntick 5 09:33:17\\r\\ntick 6 09:33:18\\r\\ntick 7 09:33:19\\r\\ntick 8 09:33:20\\r\\ntick 9 09:33:21\\r\\ntick 10 09:33:22\\r\\ntick 11 09:33:23\\r\\ntick 12 09:33:24\\r\\ntick 13 09:33:25\\r\\ntick 14 09:33:26\\r\\ntick 15 09:33:27\\r\\ntick 16 09:33:28\\r\\ntick 17 09:33:29\\r\\ntick 18 09:33:30\\r\\ntick 19 09:33:31\\r\\ntick 20 09:33:32\\r\\n\",\"outputTruncated\":false}"
+    },
+    {
+      "t": "20.3",
+      "scenario": "S1",
+      "what": "mid-run read",
+      "tickLinesInRead": 20,
+      "ticksOnDisk": 20
+    },
+    {
+      "t": "66.3",
+      "scenario": "S1",
+      "what": "process_output",
+      "args": {
+        "id": "1"
+      },
+      "ms": 3,
+      "isError": false,
+      "text": "{\"id\":\"1\",\"pid\":26760,\"command\":\"powershell\",\"args\":[\"-NoProfile\",\"-ExecutionPolicy\",\"Bypass\",\"-File\",\"<run-folder>\\\\tick.ps1\",\"-Tag\",\"lca-s1\"],\"cwd\":\"<run-folder>\",\"startedAt\":\"2026-11-26T07:33:12.530Z\",\"running\":false,\"exitedAt\":\"2026-11-26T07:34:13.645Z\",\"exitCode\":0,\"signal\":null,\"output\":\"tick 1 09:33:13\\r\\ntick 2 09:33:14\\r\\ntick 3 09:33:15\\r\\ntick 4 09:33:16\\r\\ntick 5 09:33:17\\r\\ntick 6 09:33:18\\r\\ntick 7 09:33:19\\r\\ntick 8 09:33:20\\r\\ntick 9 09:33:21\\r\\ntick 10 09:33:22\\r\\ntick 11 09:33:23\\r\\ntick 12 09:33:24\\r\\ntick 13 09:33:25\\r\\ntick 14 09:33:26\\r\\ntick 15 09:33:27\\r\\ntick 16 09:33:28\\r\\ntick 17 09:33:29\\r\\ntick 18 09:33:30\\r\\ntick 19 09:33:31\\r\\ntick 20 09:33:32\\r\\ntick 21 09:33:33\\r\\ntick 22 09:33:34\\r\\ntick 23 09:33:35\\r\\ntick 24 09:33:36\\r\\ntick 25 09:33:37\\r\\ntick 26 09:33:38\\r\\ntick 27 09:33:39\\r\\ntick 28 09:33:40\\r\\ntick 29 09:33:41\\r\\ntick 30 09:33:42\\r\\ntick 31 09:33:43\\r\\ntick 32 09:33:44\\r\\ntick 33 09:33:45\\r\\ntick 34 09:33:46\\r\\ntick 35 09:33:47\\r\\ntick 36 09:33:48\\r\\ntick 37 09:33:49\\r\\ntick 38 09:33:50\\r\\ntick 39 09:33:51\\r\\ntick 40 09:33:52\\r\\ntick 41 09:33:53\\r\\ntick 42 09:33:54\\r\\ntick 43 09:33:55\\r\\ntick 44 09:33:56\\r\\ntick 45 09:33:57\\r\\ntick 46 09:33:58\\r\\ntick 47 09:33:59\\r\\ntick 48 09:34:00\\r\\ntick 49 09:34:01\\r\\ntick 50 09:34:02\\r\\ntick 51 09:34:03\\r\\ntick 52 09:34:04\\r\\ntick 53 09:34:05\\r\\ntick 54 09:34:06\\r\\ntick 55 09:34:07\\r\\ntick 56 09:34:08\\r\\ntick 57 09:34:09\\r\\ntick 58 09:34:10\\r\\ntick 59 09:34:11\\r\\ntick 60 09:34:12\\r\\ndone lca-s1\\r\\n\",\"outputTruncated\":false}"
+    },
+    {
+      "t": "66.3",
+      "scenario": "S1",
+      "what": "end read",
+      "tickLinesInRead": 60,
+      "doneSeen": true,
+      "ticksOnDisk": 60,
+      "workloadAlive": false
+    },
+    {
+      "t": "66.6",
+      "scenario": "S2",
+      "what": "connected",
+      "serverPid": 39344,
+      "serverVersion": {
+        "name": "local-commander-mcp",
+        "version": "0.1.4"
+      }
+    },
+    {
+      "t": "66.7",
+      "scenario": "S2",
+      "what": "process_start",
+      "args": {
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "<run-folder>\\tick.ps1",
+          "-Tag",
+          "lca-s2"
+        ],
+        "cwd": "<run-folder>"
+      },
+      "ms": 59,
+      "isError": false,
+      "text": "{\"id\":\"1\",\"pid\":13956,\"command\":\"powershell\",\"args\":[\"-NoProfile\",\"-ExecutionPolicy\",\"Bypass\",\"-File\",\"<run-folder>\\\\tick.ps1\",\"-Tag\",\"lca-s2\"],\"cwd\":\"<run-folder>\",\"startedAt\":\"2026-11-26T07:34:18.875Z\",\"running\":true}"
+    },
+    {
+      "t": "78.6",
+      "scenario": "S2",
+      "what": "process_kill",
+      "args": {
+        "id": "1"
+      },
+      "ms": 1936,
+      "isError": false,
+      "text": "{\"id\":\"1\",\"pid\":13956,\"command\":\"powershell\",\"args\":[\"-NoProfile\",\"-ExecutionPolicy\",\"Bypass\",\"-File\",\"<run-folder>\\\\tick.ps1\",\"-Tag\",\"lca-s2\"],\"cwd\":\"<run-folder>\",\"startedAt\":\"2026-11-26T07:34:18.875Z\",\"running\":false,\"exitedAt\":\"2026-11-26T07:34:29.305Z\",\"exitCode\":1,\"signal\":null,\"killConfirmed\":true}"
+    },
+    {
+      "t": "81.6",
+      "scenario": "S2",
+      "what": "3 s after kill",
+      "processId": "1",
+      "workloadPid": 13956,
+      "workloadAlive": false,
+      "ticksAtKill": 10,
+      "ticksNow": 10
+    },
+    {
+      "t": "86.6",
+      "scenario": "S2",
+      "what": "8 s after kill",
+      "workloadAlive": false,
+      "ticksNow": 10
+    },
+    {
+      "t": "86.6",
+      "scenario": "S2",
+      "what": "process_list",
+      "args": {},
+      "ms": 3,
+      "isError": false,
+      "text": "[{\"id\":\"1\",\"pid\":13956,\"command\":\"powershell\",\"args\":[\"-NoProfile\",\"-ExecutionPolicy\",\"Bypass\",\"-File\",\"<run-folder>\\\\tick.ps1\",\"-Tag\",\"lca-s2\"],\"cwd\":\"<run-folder>\",\"startedAt\":\"2026-11-26T07:34:18.875Z\",\"running\":false,\"exitedAt\":\"2026-11-26T07:34:29.305Z\",\"exitCode\":1,\"signal\":null}]"
+    },
+    {
+      "t": "87.0",
+      "scenario": "S3",
+      "what": "connected",
+      "serverPid": 37756,
+      "serverVersion": {
+        "name": "local-commander-mcp",
+        "version": "0.1.4"
+      }
+    },
+    {
+      "t": "87.0",
+      "scenario": "S3",
+      "what": "process_start",
+      "args": {
+        "command": "powershell",
+        "args": [
+          "-NoProfile",
+          "-ExecutionPolicy",
+          "Bypass",
+          "-File",
+          "<run-folder>\\tick.ps1",
+          "-Tag",
+          "lca-s3"
+        ],
+        "cwd": "<run-folder>"
+      },
+      "ms": 50,
+      "isError": false,
+      "text": "{\"id\":\"1\",\"pid\":13564,\"command\":\"powershell\",\"args\":[\"-NoProfile\",\"-ExecutionPolicy\",\"Bypass\",\"-File\",\"<run-folder>\\\\tick.ps1\",\"-Tag\",\"lca-s3\"],\"cwd\":\"<run-folder>\",\"startedAt\":\"2026-11-26T07:34:39.168Z\",\"running\":true}"
+    },
+    {
+      "t": "100.2",
+      "scenario": "S3",
+      "what": "client A closed",
+      "serverPid": 37756,
+      "serverAlive": false,
+      "processId": "1",
+      "workloadPid": 13564,
+      "workloadAlive": false,
+      "ticksNow": 10
+    },
+    {
+      "t": "100.5",
+      "scenario": "S3",
+      "what": "connected",
+      "serverPid": 34016,
+      "serverVersion": {
+        "name": "local-commander-mcp",
+        "version": "0.1.4"
+      }
+    },
+    {
+      "t": "101.6",
+      "scenario": "S3",
+      "what": "1 s after new server",
+      "workloadAlive": false,
+      "ticksNow": 10
+    },
+    {
+      "t": "101.6",
+      "scenario": "S3",
+      "what": "process_list",
+      "args": {},
+      "ms": 29,
+      "isError": false,
+      "text": "[]"
+    },
+    {
+      "t": "101.6",
+      "scenario": "S3",
+      "what": "process_output",
+      "args": {
+        "id": "1"
+      },
+      "ms": 5,
+      "isError": true,
+      "text": "Unknown process id: 1"
+    },
+    {
+      "t": "153.0",
+      "scenario": "S3",
+      "what": "after 66 s",
+      "workloadAlive": false,
+      "ticksOnDisk": 10
+    }
+  ],
+  "finishedAt": "2026-11-26T07:35:45.146Z"
+}

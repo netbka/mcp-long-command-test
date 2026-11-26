@@ -1,0 +1,217 @@
+{
+  "tool": "Desktop Commander",
+  "package": "@wonderwhy-er/desktop-commander@0.3.4",
+  "host": "HOMEPC",
+  "node": "v22.18.0",
+  "startedAt": "2026-11-25T17:46:25.742Z",
+  "config": {
+    "telemetryEnabled": false,
+    "pendingWelcomeOnboarding": false,
+    "welcomeOnboardingEligible": false
+  },
+  "steps": [
+    {
+      "t": "0.8",
+      "scenario": "S1",
+      "what": "connected",
+      "serverPid": 37976,
+      "serverVersion": {
+        "name": "desktop-commander",
+        "version": "0.3.4"
+      }
+    },
+    {
+      "t": "4.7",
+      "scenario": "S1",
+      "what": "start_process",
+      "args": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"<run-folder>\\tick.ps1\" -Tag dc-s1",
+        "timeout_ms": 3000
+      },
+      "ms": 3939,
+      "isError": false,
+      "text": "Process started with PID 41700 (shell: powershell.exe)\nInitial output:\ntick 1 19:46:28\r\ntick 2 19:46:29\r\ntick 3 19:46:30\r\n\n⏳ Process is running. Use read_process_output to get more output.\n\nNote: the blocklist could not check the commands in <run-folder>\\tick.ps1, because they are in that file, not in this command."
+    },
+    {
+      "t": "4.7",
+      "scenario": "S1",
+      "what": "returned control",
+      "afterMs": 3939,
+      "dcPid": 41700,
+      "workloadPid": 14296
+    },
+    {
+      "t": "20.8",
+      "scenario": "S1",
+      "what": "read_process_output",
+      "args": {
+        "pid": 41700,
+        "timeout_ms": 1000
+      },
+      "ms": 6,
+      "isError": false,
+      "text": "[Reading 19 new lines (total: 19 lines)]\n\ntick 1 19:46:28\r\ntick 2 19:46:29\r\ntick 3 19:46:30\r\ntick 4 19:46:31\r\ntick 5 19:46:32\r\ntick 6 19:46:33\r\ntick 7 19:46:34\r\ntick 8 19:46:35\r\ntick 9 19:46:36\r\ntick 10 19:46:37\r\ntick 11 19:46:38\r\ntick 12 19:46:39\r\ntick 13 19:46:40\r\ntick 14 19:46:41\r\ntick 15 19:46:42\r\ntick 16 19:46:43\r\ntick 17 19:46:44\r\ntick 18 19:46:45\r\ntick 19 19:46:46\r"
+    },
+    {
+      "t": "20.8",
+      "scenario": "S1",
+      "what": "mid-run read",
+      "tickLinesInRead": 19,
+      "ticksOnDisk": 19
+    },
+    {
+      "t": "66.8",
+      "scenario": "S1",
+      "what": "read_process_output",
+      "args": {
+        "pid": 41700,
+        "timeout_ms": 1000
+      },
+      "ms": 5,
+      "isError": false,
+      "text": "[Reading 42 new lines (total: 61 lines)]\n\ntick 20 19:46:47\r\ntick 21 19:46:48\r\ntick 22 19:46:49\r\ntick 23 19:46:50\r\ntick 24 19:46:51\r\ntick 25 19:46:52\r\ntick 26 19:46:53\r\ntick 27 19:46:54\r\ntick 28 19:46:55\r\ntick 29 19:46:56\r\ntick 30 19:46:57\r\ntick 31 19:46:58\r\ntick 32 19:46:59\r\ntick 33 19:47:00\r\ntick 34 19:47:01\r\ntick 35 19:47:02\r\ntick 36 19:47:03\r\ntick 37 19:47:04\r\ntick 38 19:47:05\r\ntick 39 19:47:06\r\ntick 40 19:47:07\r\ntick 41 19:47:08\r\ntick 42 19:47:09\r\ntick 43 19:47:10\r\ntick 44 19:47:11\r\ntick 45 19:47:12\r\ntick 46 19:47:13\r\ntick 47 19:47:14\r\ntick 48 19:47:15\r\ntick 49 19:47:16\r\ntick 50 19:47:17\r\ntick 51 19:47:18\r\ntick 52 19:47:19\r\ntick 53 19:47:20\r\ntick 54 19:47:21\r\ntick 55 19:47:22\r\ntick 56 19:47:23\r\ntick 57 19:47:24\r\ntick 58 19:47:25\r\ntick 59 19:47:26\r\ntick 60 19:47:27\r\ndone dc-s1\r\n✅ Process completed with exit code 0 (runtime: 61.08s)"
+    },
+    {
+      "t": "66.8",
+      "scenario": "S1",
+      "what": "end read",
+      "tickLinesInRead": 41,
+      "doneSeen": true,
+      "ticksOnDisk": 60,
+      "workloadAlive": false
+    },
+    {
+      "t": "67.7",
+      "scenario": "S2",
+      "what": "connected",
+      "serverPid": 27548,
+      "serverVersion": {
+        "name": "desktop-commander",
+        "version": "0.3.4"
+      }
+    },
+    {
+      "t": "71.3",
+      "scenario": "S2",
+      "what": "start_process",
+      "args": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"<run-folder>\\tick.ps1\" -Tag dc-s2",
+        "timeout_ms": 3000
+      },
+      "ms": 3638,
+      "isError": false,
+      "text": "Process started with PID 14428 (shell: powershell.exe)\nInitial output:\ntick 1 19:47:34\r\ntick 2 19:47:35\r\ntick 3 19:47:36\r\n\n⏳ Process is running. Use read_process_output to get more output.\n\nNote: the blocklist could not check the commands in <run-folder>\\tick.ps1, because they are in that file, not in this command."
+    },
+    {
+      "t": "77.9",
+      "scenario": "S2",
+      "what": "force_terminate",
+      "args": {
+        "pid": 14428
+      },
+      "ms": 261,
+      "isError": false,
+      "text": "Successfully initiated termination of session 14428"
+    },
+    {
+      "t": "80.9",
+      "scenario": "S2",
+      "what": "3 s after terminate",
+      "dcPid": 14428,
+      "dcPidAlive": false,
+      "workloadPid": 45344,
+      "workloadAlive": false,
+      "ticksAtTerminate": 10,
+      "ticksNow": 10
+    },
+    {
+      "t": "85.9",
+      "scenario": "S2",
+      "what": "8 s after terminate",
+      "workloadAlive": false,
+      "ticksNow": 10
+    },
+    {
+      "t": "85.9",
+      "scenario": "S2",
+      "what": "list_sessions",
+      "args": {},
+      "ms": 6,
+      "isError": false,
+      "text": "No active sessions"
+    },
+    {
+      "t": "86.8",
+      "scenario": "S3",
+      "what": "connected",
+      "serverPid": 46012,
+      "serverVersion": {
+        "name": "desktop-commander",
+        "version": "0.3.4"
+      }
+    },
+    {
+      "t": "90.5",
+      "scenario": "S3",
+      "what": "start_process",
+      "args": {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"<run-folder>\\tick.ps1\" -Tag dc-s3",
+        "timeout_ms": 3000
+      },
+      "ms": 3678,
+      "isError": false,
+      "text": "Process started with PID 20268 (shell: powershell.exe)\nInitial output:\ntick 1 19:47:53\r\ntick 2 19:47:54\r\ntick 3 19:47:55\r\n\n⏳ Process is running. Use read_process_output to get more output.\n\nNote: the blocklist could not check the commands in <run-folder>\\tick.ps1, because they are in that file, not in this command."
+    },
+    {
+      "t": "100.8",
+      "scenario": "S3",
+      "what": "client A closed",
+      "serverPid": 46012,
+      "serverAlive": false,
+      "dcPid": 20268,
+      "dcPidAlive": false,
+      "workloadPid": 38776,
+      "workloadAlive": true,
+      "ticksNow": 13
+    },
+    {
+      "t": "101.6",
+      "scenario": "S3",
+      "what": "connected",
+      "serverPid": 41540,
+      "serverVersion": {
+        "name": "desktop-commander",
+        "version": "0.3.4"
+      }
+    },
+    {
+      "t": "101.6",
+      "scenario": "S3",
+      "what": "list_sessions",
+      "args": {},
+      "ms": 8,
+      "isError": false,
+      "text": "No active sessions"
+    },
+    {
+      "t": "101.6",
+      "scenario": "S3",
+      "what": "read_process_output",
+      "args": {
+        "pid": 20268,
+        "timeout_ms": 1000
+      },
+      "ms": 17,
+      "isError": true,
+      "text": "No session found for PID 20268"
+    },
+    {
+      "t": "152.8",
+      "scenario": "S3",
+      "what": "after 66 s",
+      "workloadAlive": false,
+      "ticksOnDisk": 60
+    }
+  ],
+  "finishedAt": "2026-11-25T17:48:58.588Z"
+}
